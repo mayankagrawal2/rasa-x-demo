@@ -90,3 +90,30 @@ nlu:
     - are you a human?
     - am I talking to a bot?
     - am I talking to a human?
+
+- lookup: symptom
+  examples: |
+    - pain
+    - stiffness
+    - deformity
+    - swelling
+    - tingling
+    - numbness
+    - difficulty walking
+    - activity limitation
+
+- lookup: region
+  examples: |
+    - neck
+    - shoulder
+    - upper back
+    - mid-back
+    - low back
+    - hip
+    - knee
+    - ankle
+    - arm
+    - forearm
+    - wrist
+    - hand
+    - feet
