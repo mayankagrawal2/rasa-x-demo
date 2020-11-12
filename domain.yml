@@ -1,34 +1,53 @@
-version: "2.0"
-
-intents:
-  - greet
-  - goodbye
-  - affirm
-  - deny
-  - mood_great
-  - mood_unhappy
-  - bot_challenge
-
-responses:
-  utter_greet:
-  - text: "Hey! How are you?"
-
-  utter_cheer_up:
-  - text: "Here is something to cheer you up:"
-    image: "https://i.imgur.com/nGF1K8f.jpg"
-
-  utter_did_that_help:
-  - text: "Did that help you?"
-
-  utter_happy:
-  - text: "Great, carry on!"
-
-  utter_goodbye:
-  - text: "Bye"
-
-  utter_iamabot:
-  - text: "I am a bot, powered by Rasa."
-
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
+intents:
+- tell_symptoms
+- days_since_problem
+- intent
+- user
+- history
+- greet
+- goodbye
+- affirm
+- deny
+- mood_great
+- mood_unhappy
+- bot_challenge
+entities:
+- symptom
+- region
+- action
+- name
+- speciality
+slots:
+  symptom:
+    type: list
+    influence_conversation: true
+responses:
+  utter_greet:
+  - text: Hey! How are you?
+  utter_cheer_up:
+  - image: https://i.imgur.com/nGF1K8f.jpg
+    text: 'Here is something to cheer you up:'
+  utter_did_that_help:
+  - text: Did that help you?
+  utter_happy:
+  - text: Great, carry on!
+  utter_goodbye:
+  - text: Bye
+  utter_iamabot:
+  - text: I am a bot, powered by Rasa.
+  utter_days_since_problem:
+  - text: Can you please tell since when you are facing this problem?
+  utter_other_symptoms:
+  - text: Are you suffering from any of the following symptoms?
+  utter_please_describe_symptom:
+  - text: Which of the following best describes your {symptom}?
+  utter_acknowledge_symptom:
+  - text: Hi. Sorry to hear that you have some symptoms. What can I do for you?
+  - text: Hello. Okay. so what do you want me to do?
+actions:
+- utter_days_since_problem
+- utter_other_symptoms
+- utter_acknowledge_symptom

@@ -1,12 +1,56 @@
 version: "2.0"
-
+stories:
+- story: Story from Conversation ID 0e539876d09e4c3baad720e24e24eb99
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: tell_symptoms
+    entities:
+    - symptom: pain
+    - region: back
+  - action: utter_days_since_problem
+  - intent: days_since_problem
+- story: Story from Conversation ID 35424e2c2fc44d93a4151d0cece2f90c
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: tell_symptoms
+    entities:
+    - symptom: pain
+    - region: back
+  - action: action_default_fallback
+- story: Story from Conversation ID 35424e2c2fc44d93a4151d0cece2f90c
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: tell_symptoms
+    entities:
+    - symptom: pain
+    - region: back
+  - action: action_default_fallback
+- story: Story from Conversation ID c9d4cc2a8e7f4402ab40b64fdd6f96bc
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: tell_symptoms
+    entities:
+    - symptom: pain
+    - region: back
+- story: Story from Conversation ID 9740da0356374ea4ada8e722d0e0448b
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: tell_symptoms
+    entities:
+    - symptom: Pain
+  - slot_was_set:
+    - symptom: Pain
+  - action: utter_please_describe_symptom
 rules:
-
 - rule: Say goodbye anytime the user says goodbye
   steps:
   - intent: goodbye
   - action: utter_goodbye
-
 - rule: Say 'I am a bot' anytime the user challenges
   steps:
   - intent: bot_challenge

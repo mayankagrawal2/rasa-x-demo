@@ -15,6 +15,8 @@ nlu:
     - goodmorning
     - goodevening
     - good afternoon
+    - Hi
+    - HI
 - intent: goodbye
   examples: |
     - good afternoon
@@ -28,6 +30,7 @@ nlu:
     - see you around
     - bye bye
     - see you later
+    - Bye
 - intent: affirm
   examples: |
     - yes
@@ -61,6 +64,7 @@ nlu:
     - so so perfect
     - so good
     - so perfect
+    - Fine
 - intent: mood_unhappy
   examples: |
     - my day was horrible
@@ -88,3 +92,17 @@ nlu:
     - I have [knee](region) [pain](symptom)
     - I am troubled with some [stiffness](symptom) in my [neck](region) and [shoulders](region)
     - I have [mid-back](region) [pain](symptom)
+    - I have tingling in my [neck](region)
+    - I am having a [problem](symptom) while [walking](action).
+    - I am having [problem](symptom) while [walking](action)
+    - I am facing this [problem](symptom) since 10 days
+    - I am having [pain](symptom) in my arm
+    - i am having [pain](symptom) in my [back](region)
+    - i am having [pain](symptom) in [leg](symptom)
+    - I have [pain](symptom) in my [body](symptom)
+    - I have [pain](symptom) in [knee](symptom)
+    - I am having a [problem](symptom) while [walking](symptom)
+    - I have [pain](symptom) in my [back](region)
+- intent: days_since_problem
+  examples: |
+    - 10 days
